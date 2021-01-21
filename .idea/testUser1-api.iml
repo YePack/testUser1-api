@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$MODULE_DIR$/../../gin-gonic" />
+        <option value="file://$MODULE_DIR$/../../gin-contrib" />
+        <option value="file://$MODULE_DIR$/../../apex" />
+        <option value="file://$MODULE_DIR$/../../davecgh" />
+        <option value="file://$MODULE_DIR$/../../federicoleon" />
+        <option value="file://$MODULE_DIR$/../../go-kit" />
+        <option value="file://$MODULE_DIR$/../../go-logfmt" />
+        <option value="file://$MODULE_DIR$/../../go-playground" />
+        <option value="file://$MODULE_DIR$/../../go-sql-driver" />
+        <option value="file://$MODULE_DIR$/../../go-stack" />
+        <option value="file://$MODULE_DIR$/../../go-telegram-bot-api" />
+        <option value="file://$MODULE_DIR$/../../gocql" />
+        <option value="file://$MODULE_DIR$/../../golang" />
+        <option value="file://$MODULE_DIR$/../../hailocab" />
+        <option value="file://$MODULE_DIR$/../../leodido" />
+        <option value="file://$MODULE_DIR$/../../mattn" />
+        <option value="file://$MODULE_DIR$/../../mercadolibre" />
+        <option value="file://$MODULE_DIR$/../../pkg" />
+        <option value="file://$MODULE_DIR$/../../pmezard" />
+        <option value="file://$MODULE_DIR$/../../rs" />
+        <option value="file://$MODULE_DIR$/../../sirupsen" />
+        <option value="file://$MODULE_DIR$/../../stretchr" />
+        <option value="file://$MODULE_DIR$/../../technoweenie" />
+        <option value="file://$MODULE_DIR$/../../uber-go" />
+        <option value="file://$MODULE_DIR$/../../ugorji" />
+      </list>
+    </option>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
