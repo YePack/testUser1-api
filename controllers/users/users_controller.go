@@ -7,16 +7,16 @@ import (
 	"github.com/yepack/testOauth_go/oauth"
 	"github.com/yepack/testUser1-api/domain/users"
 	"github.com/yepack/testUser1-api/services"
-	"github.com/yepack/testUser1-api/utils/errors"
+	"github.com/yepack/testUtils-api/rest_errors"
 	"io/ioutil"
 	"net/http"
 	"strconv"
 )
 
-func getUserId(userIdParam string) (int64, *errors.RestErr) {
+func getUserId(userIdParam string) (int64, *rest_errors.RestErr) {
 	userId, userErr := strconv.ParseInt(userIdParam, 10, 64)
 	if userErr != nil {
-		return 0, errors.NewBadRequestError("invalid used id (should be a number")
+		return 0, rest_errors.NewBadRequestError("invalid used id (should be a number")
 	}
 	return userId, nil
 }
@@ -30,7 +30,7 @@ func Create(c *gin.Context) {
 		return
 	}
 	if err := json.Unmarshal(bytes, &user); err != nil {
-		restErr := errors.NewBadRequestError("invalid json body!")
+		restErr := rest_errors.NewBadRequestError("invalid json body!")
 		c.JSON(restErr.Status, restErr)
 		return
 	}
@@ -49,7 +49,7 @@ func Get(c *gin.Context) {
 	}
 
 	if callerId := oauth.GetCallerId(c.Request); callerId == 0 {
-		err := errors.RestErr{
+		err := rest_errors.RestErr{
 			Status:  http.StatusUnauthorized,
 			Message: "resource not available",
 		}
@@ -84,7 +84,7 @@ func Update(c *gin.Context) {
 
 	var user users.User
 	if err := c.ShouldBindJSON(&user); err != nil {
-		restErr := errors.NewBadRequestError("invalid json body")
+		restErr := rest_errors.NewBadRequestError("invalid json body")
 		c.JSON(restErr.Status, restErr)
 		return
 	}
@@ -128,7 +128,7 @@ func Search(c *gin.Context) {
 func Login(c *gin.Context) {
 	var request users.LoginRequest
 	if err := c.ShouldBindJSON(&request); err != nil {
-		restErr := errors.NewBadRequestError("invalid json body")
+		restErr := rest_errors.NewBadRequestError("invalid json body")
 		c.JSON(restErr.Status, restErr)
 		return
 	}
