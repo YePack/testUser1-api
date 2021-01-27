@@ -4,7 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"github.com/yepack/testUser1-api/datasources/mysql/users_db"
-	"github.com/yepack/testUser1-api/logger"
+	"github.com/yepack/testUtils-api/logger"
+
 	"github.com/yepack/testUser1-api/utils/mysql_utils"
 	"github.com/yepack/testUtils-api/rest_errors"
 	"strings"

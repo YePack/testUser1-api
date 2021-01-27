@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/yepack/testUser1-api/logger"
+	"github.com/yepack/testUtils-api/logger"
 )
 
 var (
