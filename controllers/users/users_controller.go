@@ -31,12 +31,12 @@ func Create(c *gin.Context) {
 	}
 	if err := json.Unmarshal(bytes, &user); err != nil {
 		restErr := rest_errors.NewBadRequestError("invalid json body!")
-		c.JSON(restErr.Status, restErr)
+		c.JSON(restErr.Status(), restErr)
 		return
 	}
 	result, saveErr := services.UserService.CreateUser(user)
 	if saveErr != nil {
-		c.JSON(saveErr.Status, saveErr)
+		c.JSON(saveErr.Status(), saveErr)
 		return
 	}
 	c.JSON(http.StatusCreated, result.Marshall(c.GetHeader("X-public") == "true"))
