@@ -87,4 +87,6 @@ func (s *usersService) LoginUser(request users.LoginRequest) (*users.User, rest_
 		return nil, err
 	}
 	return dao, nil
+
 }
+
