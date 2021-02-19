@@ -10,6 +10,9 @@ const (
 func GetNow() time.Time {
 	return time.Now().UTC()
 }
+func GetString(){
+
+}
 
 func GetNowDBFormat() string {
 	return GetNow().Format(apiDbLayout)
